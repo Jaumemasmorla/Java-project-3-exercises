@@ -42,9 +42,16 @@ public class ItemController {
         return ResponseEntity.ok(item);
     }
 
-    @PutMapping("items/{name}")
+    @PutMapping("/items/{name}")
     public Optional<ResponseEntity<Item>> updateItem(@PathVariable String name, @RequestBody ItemRegistrationRequest itemRegistrationRequest){
         Optional<Item> updatedItem = itemService.updateItem(name, itemRegistrationRequest);
         return updatedItem.map(item-> ResponseEntity.ok(item));
     }
+
+    @DeleteMapping("/items/{name}")
+    public ResponseEntity<Void> deleteItem(@PathVariable String name){
+        boolean deletedItem= itemService.deleteItem(name);
+        return ResponseEntity.noContent().build();
+    }
+
 }

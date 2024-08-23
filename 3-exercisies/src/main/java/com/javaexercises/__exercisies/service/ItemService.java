@@ -41,4 +41,16 @@ public class ItemService {
         return Optional.of(itemUpdated);
 
     }
+
+    //CREATE THE DELETE METHOD
+
+    public boolean deleteItem(String name){
+        Optional<Item> items = itemRepository.findByName(name);
+        if (items.isEmpty()){
+            return false;
+        }
+        itemRepository.delete(items.get());
+
+        return true;
+    }
 }
