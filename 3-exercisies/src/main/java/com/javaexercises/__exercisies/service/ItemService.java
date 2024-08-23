@@ -30,4 +30,15 @@ public class ItemService {
     public Optional<Item> getItemByName(String name){
         return itemRepository.findByName(name);
     }
+
+    public Optional<Item> updateItem(String name, ItemRegistrationRequest itemRegistrationRequest){
+        Optional<Item> items = itemRepository.findByName(name);
+        Item existingItem = items.get();
+        existingItem.setName(itemRegistrationRequest.getName());
+
+        Item itemUpdated = itemRepository.save(existingItem);
+
+        return Optional.of(itemUpdated);
+
+    }
 }

@@ -41,4 +41,10 @@ public class ItemController {
         Optional<Item> item = itemService.getItemByName(name);
         return ResponseEntity.ok(item);
     }
+
+    @PutMapping("items/{name}")
+    public Optional<ResponseEntity<Item>> updateItem(@PathVariable String name, @RequestBody ItemRegistrationRequest itemRegistrationRequest){
+        Optional<Item> updatedItem = itemService.updateItem(name, itemRegistrationRequest);
+        return updatedItem.map(item-> ResponseEntity.ok(item));
+    }
 }
