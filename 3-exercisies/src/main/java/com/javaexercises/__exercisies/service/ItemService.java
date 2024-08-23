@@ -7,6 +7,9 @@ import com.javaexercises.__exercisies.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 public class ItemService {
@@ -18,5 +21,13 @@ public class ItemService {
                 .name(itemRegistrationRequest.getName())
                 .build();
         return itemRepository.save(item);
+    }
+
+    public List<Item> getAllItems(){
+        return itemRepository.findAll();
+    }
+
+    public Optional<Item> getItemByName(String name){
+        return itemRepository.findByName(name);
     }
 }
