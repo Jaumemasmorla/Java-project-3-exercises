@@ -1,7 +1,7 @@
-package com.javaexercises.__exercisies.controller;
+package com.javaexercises.__exercisies.exercise_3.controller;
 
 
-import com.javaexercises.__exercisies.service.ValidateBracketsService;
+import com.javaexercises.__exercisies.exercise_3.service.ValidateBracketsService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

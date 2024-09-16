@@ -1,9 +1,8 @@
-package com.javaexercises.__exercisies.controller;
+package com.javaexercises.__exercisies.exercise_1.controller;
 
-import com.javaexercises.__exercisies.DTO.ItemRegistrationRequest;
-import com.javaexercises.__exercisies.model.Item;
-import com.javaexercises.__exercisies.service.ItemService;
-import com.javaexercises.__exercisies.service.PalindromeService;
+import com.javaexercises.__exercisies.exercise_1.DTO.ItemRegistrationRequest;
+import com.javaexercises.__exercisies.exercise_1.model.Item;
+import com.javaexercises.__exercisies.exercise_1.service.ItemService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

@@ -1,9 +1,9 @@
-package com.javaexercises.__exercisies.service;
+package com.javaexercises.__exercisies.exercise_1.service;
 
-import com.javaexercises.__exercisies.DTO.ItemRegistrationRequest;
+import com.javaexercises.__exercisies.exercise_1.DTO.ItemRegistrationRequest;
 
-import com.javaexercises.__exercisies.model.Item;
-import com.javaexercises.__exercisies.repository.ItemRepository;
+import com.javaexercises.__exercisies.exercise_1.model.Item;
+import com.javaexercises.__exercisies.exercise_1.ItemRepository.ItemRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

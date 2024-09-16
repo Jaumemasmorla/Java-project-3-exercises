@@ -1,4 +1,4 @@
-package com.javaexercises.__exercisies.model;
+package com.javaexercises.__exercisies.exercise_1.model;
 
 
 import lombok.AllArgsConstructor;
@@ -8,8 +8,6 @@ import lombok.NoArgsConstructor;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import java.util.Collections;
 
 @Data
 @Builder

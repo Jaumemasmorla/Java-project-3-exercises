@@ -1,4 +1,4 @@
-package com.javaexercises.__exercisies.service;
+package com.javaexercises.__exercisies.exercise_3.service;
 
 import org.springframework.stereotype.Service;
 

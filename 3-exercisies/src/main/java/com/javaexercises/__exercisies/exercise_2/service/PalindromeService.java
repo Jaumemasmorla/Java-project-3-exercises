@@ -1,9 +1,7 @@
-package com.javaexercises.__exercisies.service;
+package com.javaexercises.__exercisies.exercise_2.service;
 
 
 import org.springframework.stereotype.Service;
-
-import java.util.Locale;
 
 @Service
 public class PalindromeService {

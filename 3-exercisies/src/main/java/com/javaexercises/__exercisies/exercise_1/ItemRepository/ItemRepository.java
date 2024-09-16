@@ -1,7 +1,6 @@
-package com.javaexercises.__exercisies.repository;
+package com.javaexercises.__exercisies.exercise_1.ItemRepository;
 
-import com.javaexercises.__exercisies.model.Item;
-import org.bson.types.ObjectId;
+import com.javaexercises.__exercisies.exercise_1.model.Item;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
