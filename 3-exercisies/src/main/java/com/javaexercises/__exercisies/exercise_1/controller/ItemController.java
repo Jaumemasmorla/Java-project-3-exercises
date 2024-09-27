@@ -27,10 +27,10 @@ public class ItemController {
 
     @PostMapping("/items")
     public ResponseEntity<Item> createItem(@RequestBody ItemRegistrationRequest itemRegistrationRequest){
-        itemService.createItem(itemRegistrationRequest);
-
-        return ResponseEntity.status(HttpStatus.CREATED).build();
+        Item createdItem = itemService.createItem(itemRegistrationRequest);
+        return ResponseEntity.status(HttpStatus.CREATED).body(createdItem);
     }
+
 
     @GetMapping("/items")
     public ResponseEntity<List<Item>> getAllItems(){

@@ -42,7 +42,7 @@ public class ItemService {
 
     }
 
-    //CREATE THE DELETE METHOD
+
 
     public boolean deleteItem(String name){
         Optional<Item> items = itemRepository.findByName(name);

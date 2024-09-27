@@ -1,6 +1,5 @@
 package com.javaexercises.__exercisies.exercise_3.controller;
 
-
 import com.javaexercises.__exercisies.exercise_3.service.ValidateBracketsService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -14,15 +13,14 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v3")
 public class ValidateBracketsController {
 
     private final ValidateBracketsService validateBracketsService;
 
-    @PostMapping("/validate-brackets")
-    public ResponseEntity<String> validateBrackets(@RequestBody String sentence){
-        boolean isValidBrackets= validateBracketsService.validateBrackets(sentence);
-
+    @PostMapping(value = "/validate-brackets", consumes = "text/plain", produces = "text/plain")
+    public ResponseEntity<String> validateBrackets(@RequestBody String sentence) {
+        boolean isValidBrackets = validateBracketsService.validateBrackets(sentence);
         return isValidBrackets ? ResponseEntity.ok("OK") : ResponseEntity.status(HttpStatus.BAD_REQUEST).body("KO");
     }
 }
