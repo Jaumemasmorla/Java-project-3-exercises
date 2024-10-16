@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exercise2.css">
+    <title>Exercise 2 - Palindrome Checker</title>
+</head>
+<body>
+<nav class="navbar-exercise-2">
+    <div class="navbar-brand-exercise-2">
+        <h1>Exercises App</h1>
+    </div>
+    <ul class="navbar-links-exercise-2">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="authenticate.html">Authenticate</a></li>
+        <li><a href="exercise1.html">Exercise 1</a></li>
+        <li><a href="exercise3.html">Validate Brackets</a></li>
+    </ul>
+</nav>
+
+<div id="exercise2-container">
+    <h1>Exercise 2: Palindrome Checker</h1>
+    <button id="open-modal">Check Palindrome</button>
+
+
+    <div id="token-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <h2>Paste Your Token</h2>
+            <textarea id="token-textarea" rows="4" placeholder="Paste your JWT token here..."></textarea>
+            <button id="submit-token">Submit Token</button>
+        </div>
+    </div>
+
+
+    <div id="palindrome-container" style="display: none;">
+        <h2>Check Palindrome</h2>
+        <input type="text" id="palindrome-input" placeholder="Enter a word or phrase">
+        <button id="check-palindrome">Check</button>
+        <p id="result"></p>
+    </div>
+</div>
+
+<script src="exercise2.js"></script>
+</body>
+</html>

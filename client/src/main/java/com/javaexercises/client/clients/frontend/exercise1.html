@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1: Item List</title>
+    <link rel="stylesheet" href="exercise1.css">
+</head>
+<body>
+
+<nav class="navbar-exercise-1">
+    <div class="navbar-brand-exercise-1">
+        <h1>Exercises App</h1>
+    </div>
+    <ul class="navbar-links-exercise-1">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="authenticate.html">Authenticate</a></li>
+        <li><a href="exercise2.html">Palindrome</a></li>
+        <li><a href="exercise3.html">Validate Brackets</a></li>
+    </ul>
+</nav>
+<h1>Exercise 1: Item List</h1>
+
+
+<div id="success-message" class="success"></div>
+<div id="error-message" class="error"></div>
+
+
+<div class="button-container">
+    <button id="get-all-items">Get All Items</button>
+    <button id="get-item-by-name">Get Item by Name</button>
+    <button id="add-item">Add Item</button>
+    <button id="update-item">Update Item</button>
+    <button id="delete-item">Delete Item</button>
+</div>
+
+
+<div id="input-container">
+    <div id="get-item-container" style="display: none;">
+        <input type="text" id="item-name-get" placeholder="Enter item name">
+        <button id="fetch-item">Fetch Item</button>
+    </div>
+
+    <div id="add-item-container" style="display: none;">
+        <input type="text" id="new-item-name" placeholder="Enter new item name">
+        <button id="submit-item">Add Item</button>
+    </div>
+
+    <div id="update-item-container" style="display: none;">
+        <label for="update-item-name">Item:</label>
+        <input type="text" id="update-item-name" placeholder="Enter item name to update">
+
+        <label for="new-name">Update to:</label>
+        <input type="text" id="new-name" placeholder="Enter new name">
+
+        <button id="submit-update">Update Item</button>
+    </div>
+
+
+    <div id="delete-item-container" style="display: none;">
+        <input type="text" id="item-name-delete" placeholder="Enter item name to delete">
+        <button id="submit-delete">Delete Item</button>
+    </div>
+</div>
+
+<table id="item-table" border="1" width="100%" style="margin-top: 20px;">
+    <thead>
+    <tr>
+        <th>Item Name</th>
+    </tr>
+    </thead>
+    <tbody id="item-table-body">
+    <tr>
+        <td colspan="1">Loading items...</td>
+    </tr>
+    </tbody>
+</table>
+
+<script src="exercise1.js"></script>
+</body>
+</html>

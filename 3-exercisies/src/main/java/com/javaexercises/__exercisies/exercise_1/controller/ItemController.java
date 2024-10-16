@@ -52,8 +52,8 @@ public class ItemController {
 
     @DeleteMapping("/items/{name}")
     public ResponseEntity<Void> deleteItem(@PathVariable String name){
-        boolean deletedItem= itemService.deleteItem(name);
-        return ResponseEntity.noContent().build();
+        boolean deletedItem = itemService.deleteItem(name.trim().replaceAll("[{}\"]", ""));
+        return deletedItem ? ResponseEntity.noContent().build() : ResponseEntity.status(HttpStatus.NOT_FOUND).build();
     }
 
 

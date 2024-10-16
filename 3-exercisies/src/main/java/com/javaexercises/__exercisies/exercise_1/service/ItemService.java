@@ -44,13 +44,17 @@ public class ItemService {
 
 
 
-    public boolean deleteItem(String name){
-        Optional<Item> items = itemRepository.findByName(name);
-        if (items.isEmpty()){
+    public boolean deleteItem(String name) {
+
+        String cleanedName = name.trim().replaceAll("[{}\"]", "");
+
+        Optional<Item> itemOptional = itemRepository.findByName(cleanedName);
+        if (itemOptional.isEmpty()) {
             return false;
         }
-        itemRepository.delete(items.get());
-
+        itemRepository.delete(itemOptional.get());
         return true;
     }
+
+
 }
